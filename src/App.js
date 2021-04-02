@@ -1,25 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
+import CustomerList from "./CustomerList";
+import Message from "./Message";
 
-function App() {
+// Tämä komponentti ei enää käytössä vaan korvattu navigaatiolla
+
+const App = () => {
+  // ennen alku oli muodossa: function App() {
+  // tässä esitellään vakiona const ja vakion arvo on funktio
+
+  // const [luku, setLuku] = useState(0); // Tila sisältää yhden asian eli tässä luku, alkuarvo 0 ja muutetaan setLuku-funktiolla
+  const [showMessage, setShowMessage] = useState(false);
+  const [isPositive, setIsPositive] = useState(false);
+  const [message, setMessage] = useState("");
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1 style={{ color: "white" }}>Northwind</h1>
       </header>
+      <hr />
+
+      {showMessage && <Message message={message} isPositive={isPositive} />}
+
+      <CustomerList
+        setShowMessage={setShowMessage}
+        setIsPositive={setIsPositive}
+        setMessage={setMessage}
+      />
+
+      {/*<Laskuri luku={luku} setLuku={setLuku} />*/}
+      {/* propsin nimi luku ja välittää const luku hookista / propsin nimi setLuku ja välittää setLuku-funktion*/}
     </div>
   );
-}
+};
 
 export default App;

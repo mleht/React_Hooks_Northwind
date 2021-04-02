@@ -1,38 +1,86 @@
 .App {
   text-align: center;
+  font-size: 20px;
+  color: #282c34;
+  margin-left: 0%;
+  margin-right: 0%;
+  min-height: 700px;
+  background-color: white;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  color: chocolate;
+  text-shadow: 1px 1px black;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.color-nav {
+  background-color: chocolate;
+  background: linear-gradient(chocolate, rgb(250, 131, 47));
+}
+
+.form-control:focus {
+  border-color: chocolate;
+}
+
+button {
+  border-radius: 10px;
+  margin-left: 10px;
+  font-size: 26px;
+  background-color: chocolate;
+  overflow: visible;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-color: chocolate;
+  height: 15%;
+  width: 100%;
+  font-size: 25px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.atable {
+  background-color: chocolate;
+  border-radius: 30px;
+  margin-bottom: 50px;
+  margin-top: 5px;
+  font-size: 20px;
+  width: 100%;
+  text-align: left;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.neg {
+  color: red;
+  background: lightgrey;
+  font-size: 36px;
+  font-weight: bold;
+  border-style: solid;
+  border-width: 3px;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  width: 70%;
+  margin-left: 15%;
+}
+
+.pos {
+  color: green;
+  background: lightgrey;
+  font-size: 36px;
+  font-weight: bold;
+  border-style: solid;
+  border-width: 3px;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  width: 70%;
+  margin-left: 15%;
+}
+
+@media (max-width: 767px) {
+  .kuva {
+    height: 70%;
+    width: 70%;
   }
 }
